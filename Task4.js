@@ -7,10 +7,13 @@ request('http://services.groupkt.com/country/get/all', {json: true}, (err, res, 
     }
 
 
-    JSON.parse(JSON.stringify(body.RestResponse.result), function (key, value) {
-        if ((key == 'name') || (key == 'alpha2_code') || (key == 'alpha3_code')) {
-            console.log(value);
+    let jsObjects = JSON.parse(JSON.stringify(body.RestResponse.result));
 
-        }//просто выводит все страны и все их коды
-    });
+    jsObjects.forEach((function(element) {
+
+        if(element.name=='Belarus')  {//probably need input from command line and check right country name, but i have no more time
+            console.log('Country: '+element.name+', 2digit code: '+ element.alpha2_code+', 3digit code: '+element.alpha3_code+'.');
+        }
+    }));
+
 });
