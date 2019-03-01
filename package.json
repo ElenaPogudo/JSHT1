@@ -1,0 +1,24 @@
+{
+  "name": "jsht1",
+  "version": "1.0.0",
+  "description": "Task 1-4 in module1 EPAM JS TA Labs",
+  "main": "Task1.js",
+  "dependencies": {
+    "fs": "^5.6.0",
+    "npm": "^6.1.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElenaPogudo/JSHT1.git"
+  },
+  "author": "Alena Pahuda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElenaPogudo/JSHT1/issues"
+  },
+  "homepage": "https://github.com/ElenaPogudo/JSHT1#readme"
+}

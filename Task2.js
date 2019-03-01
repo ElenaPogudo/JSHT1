@@ -1,19 +1,20 @@
 const fs = require('fs');
 
-let clearFile = (resultFileName) => {
-    return new Promise((resolve) => {
-        resolve(fs.writeFileSync(resultFileName, '', (err) => {
-            if (err) throw err;
-        }))
+const clearFile = (resultFileName) => {
+    return new Promise((resolve, reject) => {
+        fs.writeFileSync(resultFileName, '', (err) => {
+            reject(err);
+        })
     });
 
 };
 
 
-let checkFile = (startFileName) => {
+const checkFile = (startFileName) => {
     let inf = fs.readFileSync(startFileName, "utf8");
-    inf = JSON.parse(inf, function (key, value) {
-            if (key == 'flag') {
+    JSON.parse(inf, function (key, value) {
+
+            if (key === 'flag') {
                 if (typeof value === "boolean") {
                     console.log(key + ' - Ok')
                 }
@@ -25,7 +26,7 @@ let checkFile = (startFileName) => {
             }
 
 
-            if (key == 'myPromises') {
+            if (key === 'myPromises') {
                 if (Array.isArray(value)) {
                     console.log(key + ' - Ok')
                 }
@@ -36,7 +37,7 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'element') {
+            if (key === 'element') {
                 if (typeof value === "object") {
                     console.log(key + ' - Ok')
                 }
@@ -47,8 +48,8 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'screenshot') {
-                if ((typeof value == "object") && (value == undefined)) {
+            if (key === 'screenshot') {
+                if ((typeof value === "object") && (value === undefined)) {
                     console.log(key + ' - Ok')
                 }
                 else {
@@ -58,8 +59,8 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'elementText') {
-                if (typeof value == "string") {
+            if (key === 'elementText') {
+                if (typeof value === "string") {
                     console.log(key + ' - Ok')
                 }
                 else {
@@ -69,8 +70,8 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'allElementsText') {
-                if ((typeof value == "string") && (value.match("const"))) {
+            if (key === 'allElementsText') {
+                if ((typeof value === "string") && (value.match("const"))) {
                     console.log(key + ' - Ok')
                 }
                 else {
@@ -80,7 +81,7 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'counter') {
+            if (key === 'counter') {
                 if (value > 10) {
                     console.log(key + ' - Ok')
                 }
@@ -91,7 +92,7 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'config') {
+            if (key === 'config') {
                 if (value.toString() === "Common") {
                     console.log(key + ' - Ok')
                 }
@@ -102,7 +103,7 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'const') {
+            if (key === 'const') {
                 if (value.toString() === "FiRst") {
                     console.log(key + ' - Ok')
                 }
@@ -113,8 +114,8 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'parameters') {
-                if ((value.length == 8) && (Array.isArray(value))) {
+            if (key === 'parameters') {
+                if ((value.length === 8) && (Array.isArray(value))) {
                     console.log(key + ' - Ok')
                 }
                 else {
@@ -124,8 +125,8 @@ let checkFile = (startFileName) => {
                 }
             }
 
-            if (key == 'description') {
-                if ((typeof value == "string") && (value.length > 5) && (value.length < 13)) {
+            if (key === 'description') {
+                if ((typeof value === "string") && (value.length > 5) && (value.length < 13)) {
                     console.log(key + ' - Ok')
                 }
                 else {
