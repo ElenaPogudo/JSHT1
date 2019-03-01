@@ -34,7 +34,7 @@
 
  ФАЙЛ С РЕШЕНИЕМ:
    -------
-   Task2
+   Task2 - при запуске берется пример из 2.json, результат записывается в 2TaskResults.txt
 
  ЗАПУСК:
    -------
@@ -43,12 +43,11 @@
 ***
  Task4:
  ========
-
  ЗАДАНИЕ:
    -------
-         Сделать REST запрос на сервис http://services.groupkt.com/country/get/all
-         Получить данные определенной страны (любой) и вывести в консоль.
-         Подробнее про сервис здесь http://www.groupkt.com/post/c9b0ccb9/country-and-other-related-restful-rest-webservices.htm
+  Сделать REST запрос на сервис http://services.groupkt.com/country/get/all
+  Получить данные определенной страны (любой) и вывести в консоль.
+ Подробнее про сервис здесь http://www.groupkt.com/post/c9b0ccb9/country-and-other-related-restful-rest-webservices.htm
 
  ФАЙЛ С РЕШЕНИЕМ:
    -------
@@ -56,4 +55,4 @@
 
  ЗАПУСК:
    -------
-   из рута проекта "node Task4"
+   из рута проекта "node Task4 + @full country name@"

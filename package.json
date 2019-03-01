@@ -4,12 +4,13 @@
   "description": "Task 1-4 in module1 EPAM JS TA Labs",
   "main": "Task1.js",
   "dependencies": {
-    "fs": "^5.6.0",
+    "fs": "0.0.1-security",
     "npm": "^6.1.0",
+    "request": "^2.88.0",
     "request-promise-native": "^1.0.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node Task1"
   },
   "repository": {
     "type": "git",

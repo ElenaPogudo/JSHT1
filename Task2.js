@@ -16,10 +16,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'flag') {
                 if (typeof value === "boolean") {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -28,10 +32,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'myPromises') {
                 if (Array.isArray(value)) {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -39,10 +47,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'element') {
                 if (typeof value === "object") {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -50,10 +62,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'screenshot') {
                 if ((typeof value === "object") && (value === undefined)) {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -61,10 +77,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'elementText') {
                 if (typeof value === "string") {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -72,10 +92,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'allElementsText') {
                 if ((typeof value === "string") && (value.match("const"))) {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -83,10 +107,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'counter') {
                 if (value > 10) {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -94,10 +122,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'config') {
                 if (value.toString() === "Common") {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -105,10 +137,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'const') {
                 if (value.toString() === "FiRst") {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -116,10 +152,14 @@ const checkFile = (startFileName) => {
 
             if (key === 'parameters') {
                 if ((value.length === 8) && (Array.isArray(value))) {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
@@ -127,16 +167,22 @@ const checkFile = (startFileName) => {
 
             if (key === 'description') {
                 if ((typeof value === "string") && (value.length > 5) && (value.length < 13)) {
-                    console.log(key + ' - Ok')
+                    console.log(key + ' - ok');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + " - ok" + '\n', 'utf8', (err) => {
+                        if (err) throw err;
+                    });
                 }
                 else {
-                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value:" + value + '\n', 'utf8', (err) => {
+                    console.log(key + ' - WARNING');
+                    fs.appendFileSync('2TaskResults.txt', "Property: " + key + ", value: " + value + '\n', 'utf8', (err) => {
                         if (err) throw err;
                     });
                 }
             }
         }
-    )
+
+    );
+    console.log('All warnings shown in 2TaskResylts.txt file');
 };
 
-clearFile('2TaskResults.txt').then(checkFile('3.json'));
+clearFile('2TaskResults.txt').then(checkFile('2.json'));
