@@ -13,7 +13,7 @@ function makeRequestAndShowResult() {
             console.log(err)
         }
             body.RestResponse.result.forEach((function (element) {
-                if (element.name == entered) {
+                if (element.name === entered) {
                     console.log('Country: ' + element.name + ', 2digit code: ' + element.alpha2_code + ', 3digit code: ' + element.alpha3_code + '.');
                     resultCount=resultCount+1
                 }
@@ -28,6 +28,7 @@ function makeRequestAndShowResult() {
 function checkIfUserInsertCountry() {
     if (entered === undefined) {
         console.log(emptyEnterError);
+        resultCount=resultCount+1;
     }
 }
 
